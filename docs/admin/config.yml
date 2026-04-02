@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: greymonroe/monroe-lab-wiki
+  branch: main
+
+media_folder: "docs/images"
+public_folder: "/images"
+
+collections:
+  - name: "protocols"
+    label: "Protocols"
+    folder: "docs/wet-lab"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "inventory"
+    label: "Inventory"
+    folder: "docs/wet-lab"
+    create: false
+    slug: "{{slug}}"
+    extension: "md"
+    filter: { field: "title", pattern: ".*[Ii]nventory.*" }
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "safety"
+    label: "Safety & Chemicals"
+    folder: "docs/lab-safety"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }

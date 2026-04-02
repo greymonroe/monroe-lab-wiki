@@ -1,0 +1,72 @@
+site_name: Monroe Lab Wiki
+site_description: Wet lab protocols, inventories, and resources for the Monroe Lab at UC Davis
+site_url: https://greymonroe.github.io/monroe-lab-wiki/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+  icon:
+    edit: material/pencil
+  custom_dir: overrides
+
+repo_url: https://github.com/greymonroe/monroe-lab-wiki
+edit_uri: edit/main/docs/
+
+plugins:
+  - search
+  - roamlinks
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Protocols:
+    - Planting on MS Plates: wet-lab/planting-arabidopsis-on-ms-plates.md
+    - Planting in Soil: wet-lab/planting-in-soil.md
+    - Seed Sterilization: wet-lab/seed-sterilization.md
+    - Stratification: wet-lab/stratification.md
+    - MS Media Recipe: wet-lab/ms-media-recipe.md
+    - Autoclave: wet-lab/autoclave.md
+    - Clean Bench: wet-lab/clean-bench.md
+    - Quick DNA Extraction: wet-lab/quick-dna-extraction.md
+    - PCR Genotyping: wet-lab/pcr-genotyping.md
+    - Gel Electrophoresis: wet-lab/gel-electrophoresis.md
+  - Inventory:
+    - Lab Inventory: wet-lab/monroe-lab-inventory.md
+    - Chemical Inventory: lab-safety/chemical-inventory.md
+
+extra_css:
+  - stylesheets/password-gate.css
+
+extra_javascript: []
