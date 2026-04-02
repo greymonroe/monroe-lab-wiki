@@ -25,13 +25,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.action.edit
-  icon:
-    edit: material/pencil
   custom_dir: overrides
-
-repo_url: https://github.com/greymonroe/monroe-lab-wiki
-edit_uri: edit/main/docs/
 
 plugins:
   - search
